@@ -1,6 +1,8 @@
-//@tsignore
+
 import React, { FC } from 'react';
 const App: FC = () => {
-  return <p>howdy</p>;
+  return (
+    
+  )
 };
 export default App;
