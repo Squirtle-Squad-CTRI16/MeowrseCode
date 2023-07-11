@@ -12,11 +12,7 @@
     "allowSyntheticDefaultImports": true,
   },
   "include": [
-<<<<<<< HEAD
-    "src"
-=======
     "src", "server",
->>>>>>> d12391fed3946609136b9bf6876077be603b39de
   ],
   "exclude": [
     "dist",

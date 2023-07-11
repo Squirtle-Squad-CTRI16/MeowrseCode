@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 import deepMeow from '../../assets/deep-ass-meow.mp3';
-import { socket } from '../../socket'
+import { socket } from '../../socket';
 import { MeowButton } from '../MeowButton/MeowButton';
-import { UserCard } from '../UserCard/UserCard'
+import { UserCard } from '../UserCard/UserCard';
 
 export const RoomPage: FC = () => {
   const [users, setUsers] = useState<string[]>([]);
@@ -13,12 +13,8 @@ export const RoomPage: FC = () => {
     meow.play();
   })
 
-  socket.on('joined-room', (usersResponse) => {
+  socket.on('userList', (usersResponse) => {
     setUsers(usersResponse);
-  })
-
-  socket.on('exited-room', (exitResponse) => {
-    setUsers(exitResponse);
   })
 
   return (

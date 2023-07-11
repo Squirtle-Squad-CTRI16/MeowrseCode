@@ -1,17 +1,20 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router';
 import './CreateUser.scss';
 import { socket } from '../../socket'
 import { Rooms } from '../Rooms/Rooms';
+import { UserContext } from '../../userContext';
 import type { CreateUserProps } from '../../../types';
 
 
 export const CreateUser: FC<CreateUserProps> = ({activeRooms}) => {
 
-const [userName, setUserName ] = useState<string>('');
+const {userName, setUserName} = useContext(UserContext);
 // const [openRooms, setOpenRooms] = useState<string[]>([]);
-
-const handleClick = () => {
-  socket.emit('user-created');
+const nav = useNavigate();
+const handleClick = () => { 
+  socket.emit('join', userName);
+  nav('/board');
   // toggleRooms(userName);
 };
 
