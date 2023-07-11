@@ -6,7 +6,7 @@ const USerCard: FC = () => {
   return (
     <div className='user-card'>
       <img>
-      {/* either insert random asset pic or cat api call? */}
+      {/* either insert random asset pic or cat api call? tbd */}
       </img>
     </div>
   )
