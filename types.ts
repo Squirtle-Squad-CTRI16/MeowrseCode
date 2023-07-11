@@ -7,9 +7,15 @@ export interface CreateUserProps {
 }
 
 export interface MeowButtonProps {
-  userID: string
+  userID: string;
 }
 
 export interface UserCardProps {
-  userID: string
+  userID: string;
+}
+
+export interface UserList {
+  id: string;
+  name: string;
+  img: string;
 }
