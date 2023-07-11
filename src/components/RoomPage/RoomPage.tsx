@@ -8,7 +8,7 @@ export const RoomPage: FC = () => {
   const [users, setUsers] = useState<string[]>([]);
 
   const meow = new Audio(deepMeow);
-  //when 'heard' is received, 
+  //when 'heard' is received
   socket.on('heard', (username) => {
     meow.play();
   })
