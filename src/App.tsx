@@ -1,9 +1,9 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { UserProvider, UserContext } from './userContext';
-import Rooms from './components/Rooms/Rooms'
-import RoomPage from './components/RoomPage/RoomPage';
-import CreateUser from './components/CreateUser/CreateUser';
+import {Rooms} from './components/Rooms/Rooms'
+import {RoomPage} from './components/RoomPage/RoomPage';
+import {CreateUser} from './components/CreateUser/CreateUser';
 import { socket } from './socket';
 
 const App: FC = () => {
@@ -12,9 +12,10 @@ const App: FC = () => {
     socket.on('active-rooms', (rooms: string[]) => {
       setActiveRooms(rooms);
     });
-
     return () => {
-      socket.off('active-rooms');
+      socket.off('active-rooms', () => {
+        socket.emit('user-exit', socket.id)
+      });
     }
   }, []);
 
