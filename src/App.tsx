@@ -5,6 +5,7 @@ import {Rooms} from './components/Rooms/Rooms'
 import {RoomPage} from './components/RoomPage/RoomPage';
 import {CreateUser} from './components/CreateUser/CreateUser';
 import { socket } from './socket';
+import './App.scss'
 
 const App: FC = () => {
   const [activeRooms, setActiveRooms] = useState<string[]>([]);
@@ -23,7 +24,7 @@ const App: FC = () => {
     <UserProvider>
       <Routes>
         <Route path={'/'} element={<><CreateUser activeRooms={activeRooms}/><Rooms activeRooms={activeRooms}/></>} />
-        <Route path={'/board'} element={<RoomPage/>} />
+        <Route path={'/cheezeburger'} element={<RoomPage/>} />
       </Routes>
     </UserProvider>
   )
