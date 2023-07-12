@@ -63,6 +63,8 @@ module.exports = {
       util: require.resolve('util/'),
       timers: require.resolve('timers-browserify'),
       zlib: require.resolve('browserify-zlib'),
+      assert: require.resolve('assert/'), // Add assert polyfill
+      https: require.resolve('https-browserify'), // Add https polyfill
     },
   },
-}
+};
