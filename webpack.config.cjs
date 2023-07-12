@@ -2,7 +2,10 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: {
+    client: './src/index.tsx',
+    server: './server/server.ts',
+  },
   devServer: {
     proxy: {},
     historyApiFallback: true,
