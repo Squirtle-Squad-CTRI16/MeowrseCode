@@ -12,8 +12,13 @@ const io = new Server(server, { cors: { origin: '*' } }); // allow cors from any
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, '../src')));
 
+if (process.env.NODE_ENV === 'production') {
+  console.log('prod')
+  app.use(express.static('dist'));
+} else {
+  app.use(express.static(path.join(__dirname, '../src')));
+}
 const userList: UserList[] = [];
 
 io.on('connection', (socket) => {
