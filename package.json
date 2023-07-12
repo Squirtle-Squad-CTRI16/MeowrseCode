@@ -4,12 +4,11 @@
   "description": "a meowing good time",
   "main": "index.js",
   "scripts": {
-    "build": "npm i && webpack --mode production",
+    "build": "NODE_ENV=production npm i && webpack --mode production",
     "test": "test --verbose",
     "dev": "concurrently \"webpack-dev-server --mode development --hot\" \"nodemon ./server/server.ts\"  ",
     "dev-client": "webpack-dev-server --mode development --hot",
     "start": "node --experimental-modules server.js"
-    
   },
   "repository": {
     "type": "git",
