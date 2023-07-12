@@ -4,6 +4,7 @@
   "description": "a meowing good time",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode production",
     "test": "test --verbose",
     "dev": "concurrently \"webpack-dev-server --mode development --hot\" \"nodemon ./server/server.ts\"  ",
     "dev-client": "webpack-dev-server --mode development --hot"
@@ -23,8 +24,9 @@
     "express": "^4.18.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
+
     "isomorphic-fetch": "^3.0.0",
-    "node-fetch": "^3.3.1",
+
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1",

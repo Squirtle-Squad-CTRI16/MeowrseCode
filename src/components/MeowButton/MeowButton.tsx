@@ -8,10 +8,12 @@ export const MeowButton: FC<MeowButtonProps> = ({userID}) => {
     //onclick, emit to server "meow" which is the signal to meow on all other clients in room
     const handleClick = () => {
       socket.emit("meow", userID);
-      const meow = new Audio(deepMeow);
-      meow.play();
+      // const meow = new Audio(deepMeow);
+      // meow.play();
     }
     return (
-        <button className='meow-button' onClick={handleClick}>Meow</button>
-    )
+      <button className='meow-button' onClick={handleClick}>
+        Meow 😼
+      </button>
+    );
 }

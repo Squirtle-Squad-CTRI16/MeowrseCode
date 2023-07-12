@@ -11,7 +11,9 @@ export interface MeowButtonProps {
 }
 
 export interface UserCardProps {
-  userID: string;
+  id: string;
+  name: string;
+  img: string;
 }
 
 export interface UserList {
