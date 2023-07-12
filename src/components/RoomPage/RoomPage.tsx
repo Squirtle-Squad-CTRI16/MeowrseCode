@@ -35,12 +35,12 @@ export const RoomPage: FC = () => {
   });
 
   return (
-    <div className='room-page-wrapper'>
+    <div
+      className='room-page-wrapper'
+      style={{ backgroundImage: `url(${catbg})` }}
+    >
       <h2 className='cat-count'>sponsored by Jeeny, Bractlet, and Codesmith</h2>
-      <div
-        className='users-in-room'
-        style={{ backgroundImage: `url(${catbg})` }}
-      >
+      <div className='users-in-room'>
         {users.map((user) => (
           <UserCard id={user.id} name={user.name} img={user.img} />
         ))}
