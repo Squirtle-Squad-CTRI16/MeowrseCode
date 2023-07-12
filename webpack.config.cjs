@@ -12,7 +12,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js', //filler
+    filename: '[name].bundle.js', // Output file for client bundle
+    chunkFilename: '[name].bundle.js', // Output file for server bundle
   },
   plugins: [
     new HTMLWebpackPlugin({
