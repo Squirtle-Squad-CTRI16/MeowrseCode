@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import deepMeow from '../../assets/deep-ass-meow.mp3';
+import catbg from '../../assets/cat-relaxing.gif'
 import { socket } from '../../socket';
 import { MeowButton } from '../MeowButton/MeowButton';
 import { UserCard } from '../UserCard/UserCard';
@@ -34,8 +35,8 @@ export const RoomPage: FC = () => {
   });
 
   return (
-    <div className='room-page-wrapper'>
-      <h2 className='cat-count'>our cat squad is this big {users.length}</h2>
+    <div className='room-page-wrapper' style={{backgroundImage: `url(${catbg})`}}>
+      <h2 className='cat-count'>tests look good though</h2>
       <div className='users-in-room'>
         {users.map((user) => (
           <UserCard id={user.id} name={user.name} img={user.img} />
