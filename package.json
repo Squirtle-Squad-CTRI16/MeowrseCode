@@ -24,9 +24,7 @@
     "express": "^4.18.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
-
     "isomorphic-fetch": "^3.0.0",
-
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1",
@@ -36,6 +34,7 @@
     "socket.io-client": "^4.7.1",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
