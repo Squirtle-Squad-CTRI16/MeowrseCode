@@ -1,11 +1,11 @@
 @keyframes slide {
-            0% {
-                background-position: top left;
-            }
-            100% {
-                background-position: bottom right;
-            }
-        }
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: bottom right;
+  }
+}
 
 .room-page-wrapper {
   height: 100vh;
@@ -14,12 +14,12 @@
   align-content: flex-start;
   gap: 1em;
   background: rgba(0, 0, 255, 0.242);
-  background-size:auto;
+  background-size: auto;
   background-position: top left;
   animation: slide 30s linear infinite;
 }
 .cat-count {
-    margin: auto;
+  margin: auto;
   margin-top: 1em;
   text-align: center;
   background-color: white;
@@ -37,6 +37,5 @@
   flex-direction: row;
   flex-flow: wrap;
   align-content: flex-start;
-  border: 1px red solid;
   background-color: aliceblue;
 }
