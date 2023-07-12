@@ -41,7 +41,7 @@ export const CreateUser: FC<CreateUserProps> = ({ activeRooms }) => {
           onChange={handleUserNameChange}
           onKeyDown={handleKeyDown}
         />
-        <button onClick={handleClick}>I wanna meow at strangers please</button>
+        <button id="create-user-button" onClick={handleClick}>I wanna meow at strangers please</button>
       </div>
       <div className='room-list-container'>
         <Rooms activeRooms={activeRooms} />

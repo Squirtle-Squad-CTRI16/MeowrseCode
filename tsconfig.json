@@ -10,12 +10,8 @@
     "moduleResolution": "node",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "types": ["node", "jest"]
   },
-  "include": [
-    "src", "server",
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "include": ["src", "server"],
+  "exclude": ["dist", "node_modules"]
 }
