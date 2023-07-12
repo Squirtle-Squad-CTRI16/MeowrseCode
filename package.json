@@ -4,7 +4,7 @@
   "description": "a meowing good time",
   "main": "index.js",
   "scripts": {
-    "build": "npm i && cross-env && NODE_ENV=production && webpack --mode production",
+    "build": "npm i && cross-env NODE_ENV=production && webpack --mode production",
     "test": "test --verbose",
     "dev": "concurrently \"webpack-dev-server --mode development --hot\" \"nodemon ./server/server.ts\"  ",
     "dev-client": "webpack-dev-server --mode development --hot",
