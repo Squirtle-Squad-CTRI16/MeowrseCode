@@ -22,6 +22,7 @@ io.on('connection', (socket) => {
   socket.on('join', async (name: string) => {
     const catStream = await fetch('https://cataas.com/cat?json=true');
     const catJSON = await catStream.json();
+    console.log(catJSON)
     //@ts-ignore
     const catURL = `https://cataas.com/${catJSON.url}`;
     userList.push({ id: socket.id, name: name, img: catURL });
@@ -30,8 +31,7 @@ io.on('connection', (socket) => {
   });
   // user disconnects
   socket.on('disconnect', () => {
-    // get info from socket.id?\
-    //userList.find(user => user.id === socket.id)
+
     const exitedUser = userList.findIndex((user) => user.id === socket.id);
     userList.splice(exitedUser, 1);
     console.log('bye');

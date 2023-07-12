@@ -12,7 +12,7 @@ export const CreateUser: FC<CreateUserProps> = ({ activeRooms }) => {
   const nav = useNavigate();
   const handleClick = () => {
     socket.emit('join', userName);
-    setTimeout(() => nav('/cheezeburger'), 1500);
+     nav('/cheezeburger');
     // toggleRooms(userName);
   };
 
