@@ -38,7 +38,7 @@ io.on('connection', (socket) => {
   });
   // send meow
   socket.on('meow', () => {
-    socket.emit('heard', socket.id);
+    socket.broadcast.emit('heard', socket.id);
     // emit the meow everywhere else
   });
 });
