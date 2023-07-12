@@ -36,7 +36,7 @@ export const RoomPage: FC = () => {
 
   return (
     <div className='room-page-wrapper'>
-      <h2 className='cat-count'>our cat squad is this big: {users.length}</h2>
+      <h2 className='cat-count'>sponsored by Jeeny, Bractlet, and Codesmith</h2>
       <div
         className='users-in-room'
         style={{ backgroundImage: `url(${catbg})` }}

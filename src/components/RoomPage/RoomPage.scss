@@ -6,17 +6,17 @@
   gap: 1em;
   background: rgba(0, 0, 255, 0.242);
 }
-.cat-count{
-    margin-top: 1em;
-    text-align: center;
+.cat-count {
+  margin-top: 1em;
+  text-align: center;
 }
 .users-in-room {
   margin: auto;
-  
   width: 80%;
   height: 80vh;
   overflow-y: auto;
   align-self: center;
   display: flex;
-  border: 1px red solid;
+  opacity: 0.5;
+  border-radius: 10%;
 }
