@@ -65,6 +65,7 @@ module.exports = {
       zlib: require.resolve('browserify-zlib'),
       net: require.resolve('net'),
       tls: require.resolve('tls'),
+      https: require.resolve('https-browserify'),
     },
   },
 };
