@@ -24,9 +24,7 @@
     "express": "^4.18.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
-
     "isomorphic-fetch": "^3.0.0",
-
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1",
@@ -41,6 +39,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.36.0",
     "@types/isomorphic-fetch": "^0.0.36",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
