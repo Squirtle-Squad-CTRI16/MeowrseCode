@@ -38,9 +38,7 @@
     "typescript": "^5.1.6",
     "webpack": "^5.88.1",
     "webpack-dev-server": "^4.15.1",
-    "webpack-cli": "^5.1.4"
-  },
-  "devDependencies": {
+    "webpack-cli": "^5.1.4",
     "@types/isomorphic-fetch": "^0.0.36",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
