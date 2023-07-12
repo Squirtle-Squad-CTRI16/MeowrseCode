@@ -4,6 +4,7 @@ import { socket } from '../../socket';
 import { MeowButton } from '../MeowButton/MeowButton';
 import { UserCard } from '../UserCard/UserCard';
 import { UserList } from '../../../types';
+import catbg from '../../assets/cat-relaxing.gif'
 import './RoomPage.scss';
 
 export const RoomPage: FC = () => {
@@ -35,8 +36,11 @@ export const RoomPage: FC = () => {
 
   return (
     <div className='room-page-wrapper'>
-      <h2 className='cat-count'>our cat squad is this big {users.length}</h2>
-      <div className='users-in-room'>
+      <h2 className='cat-count'>our cat squad is this big: {users.length}</h2>
+      <div
+        className='users-in-room'
+        style={{ backgroundImage: `url(${catbg})` }}
+      >
         {users.map((user) => (
           <UserCard id={user.id} name={user.name} img={user.img} />
         ))}
