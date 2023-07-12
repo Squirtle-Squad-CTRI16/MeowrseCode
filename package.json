@@ -8,7 +8,7 @@
     "test": "test --verbose",
     "dev": "concurrently \"webpack-dev-server --mode development --hot\" \"nodemon ./server/server.ts\"  ",
     "dev-client": "webpack-dev-server --mode development --hot",
-    "start": "node --experimental-modules ../server/server.js"
+    "start": "node --experimental-modules bundle.js"
   },
   "repository": {
     "type": "git",
