@@ -56,6 +56,13 @@ module.exports = {
       fs: false,
       url: require.resolve('url/'),
       buffer: require.resolve('buffer/'),
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify'),
+      http: require.resolve('stream-http'),
+      querystring: require.resolve('querystring-es3'),
+      util: require.resolve('util/'),
+      timers: require.resolve('timers-browserify'),
+      zlib: require.resolve('browserify-zlib'),
     },
   },
-};
+}
