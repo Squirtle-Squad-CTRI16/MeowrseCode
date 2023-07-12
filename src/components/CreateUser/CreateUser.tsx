@@ -27,7 +27,7 @@ export const CreateUser: FC<CreateUserProps> = ({ activeRooms }) => {
   };
 
   return (
-    <div>
+    <div className='create-user-wrapper'>
       <div className="title">Meowrse Code</div>
       <div className='create-user-container'>
         <div className="cat-ears">
