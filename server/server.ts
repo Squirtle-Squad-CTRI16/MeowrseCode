@@ -3,6 +3,7 @@ import path from 'path';
 import http from 'http';
 import { Server } from 'socket.io';
 import type { UserList } from '../types';
+import fetch from 'isomorphic-fetch';
 
 const PORT = 3001;
 const app = express();
@@ -19,10 +20,9 @@ io.on('connection', (socket) => {
   console.log('Connected to server!');
   // user connects
   socket.on('join', async (name: string) => {
-    //add socket.id and name to our new object array
-    // pull the new cat image from cataas, then extract the URL to link to that specific cat
     const catStream = await fetch('https://cataas.com/cat?json=true');
     const catJSON = await catStream.json();
+    //@ts-ignore
     const catURL = `https://cataas.com/${catJSON.url}`;
     userList.push({ id: socket.id, name: name, img: catURL });
     console.log('new user!');
